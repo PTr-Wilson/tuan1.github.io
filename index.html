@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GardenSmart</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="demo.css"> -->
+    <style>
+        #BUTTON {
+            padding: 10px;
+            font-size: 20px;
+            height: 120px;
+            width: 200px;
+            background-color: rgba(76, 235, 203, 0.818);
+            border-radius: 25px;
+            font-family: fantasy;
+            color: rgb(23, 124, 116);
+            margin-top: 20px;
+            margin-left: 40px;
+            border-style: solid;
+        }
+
+        #BUTTON1 {
+            padding: 10px;
+            font-size: 20px;
+            height: 120px;
+            width: 200px;
+            background-color: rgba(76, 235, 203, 0.818);
+            border-radius: 25px;
+            font-family: fantasy;
+            color: rgb(38, 115, 116);
+            margin-top: -143px;
+            margin-left: 320px;
+            border-style: solid;
+        }
+
+        button,
+        input {
+            height: 30px;
+            width: 50px;
+            background-color: rgb(255, 201, 174);
+            border-radius: 25px;
+            font-family: fantasy;
+            color: rgb(106, 83, 58);
+        }
+        .p1{
+            margin-bottom: 20px;
+        }
+        i{
+            font-size: 30px;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: rgba(194, 194, 194, 0.725);">
+    <!-- <img id="denId_01" class="card-img-top" src="./img/light_bulb_off.png" alt="Card image" style="width: 20%"> -->
+    <div id="BUTTON">
+        <p  class="p1" style="font-size:30px;margin-top: 2%; margin-left: 21%">BUMP: <span id="trangThaiBom">off</span>
+        <br>
+        <i  style="margin-left: 30%;font-size: 30px;" class="fas fa-faucet"></i></p>
+        <p style="margin-bottom: 20px">
+            <button id="btnOnId_01" style="margin-left: 23%;">ON</button>
+            <button id="btnOffId_01">OFF</button>
+        </p>
+    </div>
+    <!-- ---------------------------------------------------------------- -->
+    <div id="BUTTON1">
+        <p class="p1" style="font-size:30px; margin-top: 2%; margin-left: 25%">FAN: <span id="trangThaiQuat">off</span>
+            <br ><i  style="margin-left: 25%;" class="fas fa-fan"></i></p>
+        <p  style="margin-bottom: 20px;">
+            <button id="btnOnId_02" style="margin-left: 23%;">ON</button>
+            <button id="btnOffId_02">OFF</button>
+        </p>
+    </div>
+    <!------------------------------------------------------------------- -->
+    <div id="BUTTON">
+        <b style="margin-left: 50%;"><i class="fas fa-thermometer-half"></i></b>
+       <br> <p style="font-size:30px; margin-left: 6%">TEMPERATURE: <span id="nhietDo" style="margin-left: 30%">0</span>&deg
+            C</p>
+    </div>
+    <!-- --------------------------------------------------------------- -->
+    <div id="BUTTON1">
+        <b style="margin-left: 50%;"> <i class="fas fa-tint"></i></b>
+       <br> <p style="font-size:30px; margin-left: 20%">HUMIDITY: <span id="doAm" style="margin-left: 25%">0</span> %</p>
+    </div>
+    <!-- ------------------------------------------------------------------ -->
+    <div id="BUTTON" style="width: 350px; height: fit-content;" >
+        <form onsubmit="submitForm(event)">
+            <input type="number" placeholder="   Max of temperature" id="valueInput1" style="width: 200px;" min="1" max="50"">
+            <input type="submit" value="ok" />
+        </form>
+        <div id="results1" style="font-size: 30px;"></div>
+    </div>
+    <!--  -->
+    <div id="BUTTON" style="width: 350px; height: fit-content;">
+        <form onsubmit="submitForm1(event)">
+            <input type="number" placeholder="   Max of humidity" id="valueInput" style="width: 200px;" min="1" max="50"">
+            <input type="submit" value="ok" />
+        </form>
+        <div id="results" style="font-size: 30px;"></div>
+    </div>
+    <div style="padding: 10px;font-size: 20px;height: 100px;width: 200px;background-color: rgba(76, 235, 203, 0.818);border-radius: 25px;font-family: fantasy;color: rgb(38, 115, 116);margin-top: -170px;margin-left: 450px;border-style: solid;">
+        <p style="font-size:30px;margin-top: 2%; margin-left: 21%">AUTO: <span id="trangThaiAuto">off</span></p>
+        <p style="margin-top: 15%">
+            <button id="btnOnId_03" style="margin-left: 23%;">ON</button>
+            <button id="btnOffId_03">OFF</button>
+        </p>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="main.js"></script>
+</body>
+<html>
